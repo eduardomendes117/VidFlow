@@ -1,0 +1,12 @@
+.planos {
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgba(128, 128, 128, 0.10);
+    padding: 2em;
+    border-radius: 4em;
+}
+
+.planos__titulo {
+    text-align: center;
+    font-size: 3em;
+}

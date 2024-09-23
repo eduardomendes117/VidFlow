@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>VidFlow</title>
+  </head>
+  <body>
+    <header class="cabeçalho">
+      <div class="cabeçalho__container">
+        <a href="../index.html">
+          <h1 class="cabeçalho__logo">
+            <svg
+              class="cabeçalho__logo__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+            >
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M0 128C0 92.7 28.7 64 64 64l256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2l0 256c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1l0-17.1 0-128 0-17.1 14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"
+              />
+            </svg>
+            VidFlow
+          </h1>
+        </a>
+
+        <!-- <form class="form">
+            <label for="search">
+              <input
+                class="input"
+                type="text"
+                required=""
+                placeholder="Pesquisar Plataformas"
+                id="search"
+              />
+              <div class="fancy-bg"></div>
+              <div class="search">
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr"
+                >
+                  <g>
+                    <path
+                      d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </label>
+          </form> -->
+
+        <div class="cabeçalho__div">
+          <a class="cabeçalho__botão" href="../pages/post.html">Criar Posts</a>
+
+          <div class="cabeçalho__perfil"></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="post">
+      <!-- <button class="cssbuttons-io-button">
+        <svg
+          viewBox="0 0 640 512"
+          fill="white"
+          width="2em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"
+          ></path>
+        </svg>
+        <span>Carregar</span>
+      </button> -->
+
+      <form id="uploadForm">
+        <label for="video">Escolha seu vídeo:</label>
+        <input class="" type="file" id="video" name="video" accept="video/*" required>
+        <input type="submit" value="Enviar Vídeo">
+    </form>
+    </section>
+  </body>
+</html>

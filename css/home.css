@@ -1,0 +1,46 @@
+.home {
+    height: calc(90vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
+
+.home__container {
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+}
+
+.home__titulo {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.home__texto {
+    font-size: 20px;
+    padding: 0.5em 0;
+}
+
+.home__botão {
+    width: max-content;
+    background-color: aquamarine;
+    color: #000;
+    padding: 1em 2em;
+    border-radius: 999px;
+    margin-top: 0.5em;
+}
+
+.home__botão:hover {
+    background-color: aqua;
+}
+
+@media screen and (min-width: 1024px) {
+    .home__texto {
+        padding: 1em 0;
+    }
+
+    .home__botão {
+        font-size: 1.2em;
+    }
+}

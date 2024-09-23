@@ -1,0 +1,42 @@
+.plataformas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  padding: 2em;
+}
+
+.plataformas__titulo {
+    font-size: 2em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.plataformas__cards {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.plataformas__card {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plataformas__card:hover {
+    cursor: pointer;
+    border: 2px solid aquamarine;
+}
+
+.plataformas__card svg {
+    width: 70px;
+    height: 70px;
+}

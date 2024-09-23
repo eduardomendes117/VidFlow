@@ -1,0 +1,37 @@
+.post {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#uploadForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.post label {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.post input[type="file"] {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.post input[type="submit"] {
+  background: #28a745;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 999px;
+}
+
+.post input[type="submit"]:hover {
+  background: #218838;
+}
