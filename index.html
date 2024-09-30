@@ -1,49 +1,191 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>VidFlow</title>
-</head>
-<body>
-    <header class="cabeçalho">
-        <nav class="cabeçalho__container">
-            <a href="index.html">
-                <h1 class="cabeçalho__logo">
-                    <svg class="cabeçalho__logo__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 128C0 92.7 28.7 64 64 64l256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2l0 256c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1l0-17.1 0-128 0-17.1 14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
-                    VidFlow
-                </h1>
-            </a>
-            <div class="cabeçalho__div">
-                <a class="cabeçalho__botão" href="pages/login.html">Conecte-se</a>
-                <a class="cabeçalho__botão" href="#">Inscreve-se</a>
-            </div>
-        </nav>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-100">
+    <header class="bg-white px-7 py-5">
+      <nav class="flex justify-between items-center max-w-6xl mx-auto">
+        <a href="index.html">
+          <h1 class="flex gap-2 font-bold text-2xl">
+            <svg
+              class="w-4"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+            >
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M0 128C0 92.7 28.7 64 64 64l256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2l0 256c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1l0-17.1 0-128 0-17.1 14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"
+              />
+            </svg>
+            VidFlow
+          </h1>
+        </a>
+
+        <a
+          class="bg-black text-white px-5 py-2 rounded-full"
+          href="pages/login.html"
+          >Conecte-se</a
+        >
+      </nav>
     </header>
 
-    <section class="home">
-        <div class="home__container">
-            <h2 class="home__titulo">Automatize Suas Postagens de Vídeo em Múltiplas Plataformas com Facilidade</h2>
-            <p class="home__texto"><strong>VidFlow</strong> é a solução ideal para criadores de conteúdo que desejam maximizar sua presença online.</p>
-            <a class="home__botão" href="pages/inicio.html">Começar</a>
+    <section class="flex flex-col justify-center gap-5 mx-auto h-[85vh] px-5 md:max-w-3xl">
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold">
+        Automatize Suas Postagens de Vídeo em Múltiplas Plataformas com
+        Facilidade
+      </h2>
+      <p class="sm:text-xl lg:text-2xl">
+        <strong>VidFlow</strong> é a solução ideal para criadores de conteúdo
+        que desejam maximizar sua presença online.
+      </p>
+      <a
+        class="bg-green-400 hover:bg-green-300 font-medium px-5 py-2 rounded-full w-max sm:text-lg  lg:text-xl"
+        href="pages/inicio.html"
+        >Começar</a
+      >
+    </section>
+
+    <section class="bg-green-200 px-5 py-7 m-5 lg:max-w-5xl lg:mx-auto lg:px-7 shadow-lg rounded-xl">
+      <h2 class="text-center text-3xl font-bold pb-10">Planos</h2>
+
+      <div class="flex flex-col gap-5 justify-center  md:flex-row mx-auto flex-wrap">
+        <div
+          class="bg-white flex-1 max-w-xs rounded-xl overflow-hidden shadow-lg"
+        >
+          <div class="p-8 h-[280px]">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Básico</h2>
+            <p class="text-4xl font-bold text-gray-800 mb-6">Free</p>
+            <ul class="text-sm text-gray-600 mb-6">
+              <li class="mb-2 flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="none"
+                  class="w-4 h-4 mr-2 text-green-500"
+                >
+                  <path
+                    d="M5 13l4 4L19 7"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                3 redes sociais
+              </li>
+              <li class="mb-2 flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="none"
+                  class="w-4 h-4 mr-2 text-green-500"
+                >
+                  <path
+                    d="M5 13l4 4L19 7"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                recursos free
+              </li>
+            </ul>
+          </div>
+          <div class="p-4">
+            <button
+              class="w-full bg-green-500 text-white rounded-full px-4 py-2 hover:bg-green-700 focus:outline-none focus:shadow-outline-green active:bg-green-800"
+            >
+              Escolher
+            </button>
+          </div>
         </div>
-    </section>
-
-    <section class="planos">
-        <h2 class="planos__titulo">Planos</h2>
+        <div
+          class="bg-white flex-1 max-w-xs rounded-lg overflow-hidden shadow-lg transition-transform transform">
         
-        <ul class="planos__cards">
-            <li class="planos__card">
-                <h4>Básico</h4>
-                <h3></h3>
-            </li>
-
-            <li class="planos__card">
-                <h4>Pro</h4>
-                <h3></h3>
-            </li>
-        </ul>
+          <div class="p-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Pro</h2>
+            <p class="text-4xl font-bold text-gray-800 mb-6">$10</p>
+            <ul class="text-sm text-gray-600 mb-6">
+              <li class="mb-2 flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="none"
+                  class="w-4 h-4 mr-2 text-green-500"
+                >
+                  <path
+                    d="M5 13l4 4L19 7"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                10 redes sociais
+              </li>
+              <li class="mb-2 flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="none"
+                  class="w-4 h-4 mr-2 text-green-500"
+                >
+                  <path
+                    d="M5 13l4 4L19 7"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                novos recursos
+              </li>
+              <li class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="none"
+                  class="w-4 h-4 mr-2 text-green-500"
+                >
+                  <path
+                    d="M5 13l4 4L19 7"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                suporte
+              </li>
+            </ul>
+          </div>
+          <div class="p-4">
+            <button
+              class="w-full bg-green-500 text-white rounded-full px-4 py-2 hover:bg-green-700 focus:outline-none focus:shadow-outline-green active:bg-green-800"
+            >
+              Escolher
+            </button>
+          </div>
+      </div>
     </section>
-</body>
+
+    <footer class="bg-slate-200 text-center p-5 font-medium">
+        <p>&copy;2024 VidFlow. Todos os direitos estão reservados</p>
+    </footer>
+  </body>
 </html>
