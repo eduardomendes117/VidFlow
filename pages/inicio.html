@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <title>VidFlow</title>
   </head>
   <body>
@@ -25,26 +25,28 @@
           </h1>
         </a>
 
-        <div class="flex items-center gap-2">
-            <a
-              class="bg-black text-white px-5 py-2 rounded-full"
-              href="pages/login.html"
-              >Criar Posts</a
-            >
+        <div id="user-info" class="flex items-center gap-2">
+          <a class="bg-black text-white px-5 py-2 rounded-full" href="post.html"
+            >Criar Posts</a
+          >
 
-            <a class="w-10 h-10 bg-slate-600 rounded-full" href=""></a>
+          <img id="profile-pic" class="w-10 h-10 rounded-full" src="" alt="" />
         </div>
       </nav>
     </header>
 
     <section class="p-10 bg-gray-100">
-      <h2 class="font-bold text-4xl text-center pb-10 ">
+      <h2 class="font-bold text-4xl text-center pb-10">
         Conecte-se <br />
         em suas plataformas
       </h2>
 
-      <ul class="flex flex-wrap items-center justify-center gap-5 max-w-5xl mx-auto">
-        <li class="bg-white flex flex-col items-center justify-between p-10 w-48 h-48 rounded-3xl shadow-sm">
+      <ul
+        class="flex flex-wrap items-center justify-center gap-5 max-w-5xl mx-auto"
+      >
+        <li
+          class="bg-white flex flex-col items-center justify-between p-10 w-48 h-48 rounded-3xl shadow-sm"
+        >
           <svg
             xmlns:xlink="http://www.w3.org/1999/xlink"
             aria-hidden="true"
@@ -65,7 +67,9 @@
           <button class="bg-green-300 px-3 py-1 rounded-full">conectar</button>
         </li>
 
-        <li class="bg-white flex flex-col items-center justify-between p-10 w-48 h-48 rounded-3xl shadow-sm">
+        <li
+          class="bg-white flex flex-col items-center justify-between p-10 w-48 h-48 rounded-3xl shadow-sm"
+        >
           <svg
             xmlns:xlink="http://www.w3.org/1999/xlink"
             xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +124,9 @@
           <button class="bg-green-300 px-3 py-1 rounded-full">conectar</button>
         </li>
 
-        <li class="bg-white flex flex-col items-center justify-between p-10 w-48 h-48 rounded-3xl shadow-sm">
+        <li
+          class="bg-white flex flex-col items-center justify-between p-10 w-48 h-48 rounded-3xl shadow-sm"
+        >
           <svg
             xmlns:xlink="http://www.w3.org/1999/xlink"
             xmlns="http://www.w3.org/2000/svg"
@@ -173,13 +179,16 @@
           <button class="bg-green-300 px-3 py-1 rounded-full">conectar</button>
         </li>
 
-
-        <li class="bg-white flex flex-col items-center justify-between p-10 w-48 h-48 rounded-3xl shadow-sm">
+        <li
+          class="bg-white flex flex-col items-center justify-between p-10 w-48 h-48 rounded-3xl shadow-sm"
+        >
           <img src="../assets/kwai.png" alt="" width="64" />
           <button class="bg-green-300 px-3 py-1 rounded-full">conectar</button>
         </li>
 
-        <li class="bg-white flex flex-col items-center justify-between p-10 w-48 h-48 rounded-3xl shadow-sm">
+        <li
+          class="bg-white flex flex-col items-center justify-between p-10 w-48 h-48 rounded-3xl shadow-sm"
+        >
           <svg
             xmlns:xlink="http://www.w3.org/1999/xlink"
             aria-hidden="true"
@@ -202,7 +211,9 @@
           <button class="bg-green-300 px-3 py-1 rounded-full">conectar</button>
         </li>
 
-        <li class="bg-white flex flex-col items-center justify-between p-10 w-48 h-48 rounded-3xl shadow-sm">
+        <li
+          class="bg-white flex flex-col items-center justify-between p-10 w-48 h-48 rounded-3xl shadow-sm"
+        >
           <svg
             xmlns:xlink="http://www.w3.org/1999/xlink"
             aria-hidden="true"
@@ -226,5 +237,8 @@
         </li>
       </ul>
     </section>
+
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="../js/server.js" defer></script>
   </body>
 </html>

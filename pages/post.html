@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+
+    <style>
+      input#file-upload-button {
+        border: none;
+        background-color: aqua;
+      }
+    </style>
     <title>VidFlow</title>
   </head>
   <body>
@@ -51,15 +58,11 @@
             </label>
           </form> -->
 
-        <div class="cabeçalho__div">
-          <a class="cabeçalho__botão" href="../pages/post.html">Criar Posts</a>
-
-          <div class="cabeçalho__perfil"></div>
-        </div>
+        <img id="profile-pic" class="w-10 h-10 rounded-full" src="" alt="" />
       </div>
     </header>
 
-    <section class="post">
+    <section class="p-10">
       <!-- <button class="cssbuttons-io-button">
         <svg
           viewBox="0 0 640 512"
@@ -74,11 +77,32 @@
         <span>Carregar</span>
       </button> -->
 
-      <form id="uploadForm">
+      <h1 class="text-3xl font-bold text-center pb-5">Novo Post</h1>
+
+      <form class="bg-white p-5 rounded-xl shadow-sm max-w-screen-md mx-auto">
         <label for="video">Escolha seu vídeo:</label>
-        <input class="" type="file" id="video" name="video" accept="video/*" required>
-        <input type="submit" value="Enviar Vídeo">
-    </form>
+        <input
+          class=""
+          type="file"
+          id="video"
+          name="video"
+          accept="video/*"
+          required
+        />
+
+        <label class="font-bold" for="titulo">Titulo</label>
+        <input class="border rounded-md p-1 w-3/5" type="text" name="titulo" id="titulo">
+
+        <label class="font-bold" for="descricao">Descrição</label>
+        <textarea class="border rounded-md p-1 w-4/5 h-32" name="descricao" id="descricao"></textarea>
+
+        <a href="plataformas.html"> 
+          <input class="cursor-pointer block bg-black text-white px-5 py-2 mt-5 rounded-full" type="button" value="Proximo">
+        </a>
+      </form>
     </section>
+
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="../js/server.js"></script>
   </body>
 </html>

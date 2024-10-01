@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-signin-client_id" content="839385603142-i6vdv0tqupvv4luhb05hpah2pf6ilgo8.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta
+      name="google-signin-client_id"
+      content="839385603142-i6vdv0tqupvv4luhb05hpah2pf6ilgo8.apps.googleusercontent.com"
+    />
 
     <link rel="stylesheet" href="../style.css" />
-    
+    <style>
+      .nsm7Bb-HzV7m-LgbsSe {
+        border-radius: 10px;
+      }
+    </style>
     <title>VidFlow</title>
   </head>
   <body>
@@ -37,7 +43,6 @@
 
     <section class="home">
       <form class="form">
-
         <div class="flex-column">
           <label>Email </label>
         </div>
@@ -58,7 +63,7 @@
         </div>
 
         <div class="flex-column">
-          <label>Senha </label>
+          <label>Senha</label>
         </div>
         <div class="inputForm">
           <svg
@@ -90,8 +95,7 @@
         </div>
 
         <div class="flex-row"></div>
-          <button id="googleBtn" class="btn google">
-            <svg
+        <!-- <button id="googleBtn"
               xml:space="preserve"
               style="enable-background: new 0 0 512 512"
               viewBox="0 0 512 512"
@@ -130,16 +134,35 @@
             </svg>
 
             Google
-          </button>
+          </button> -->
+        <div
+          id="g_id_onload"
+          data-client_id="839385603142-i6vdv0tqupvv4luhb05hpah2pf6ilgo8.apps.googleusercontent.com"
+          data-callback="handleCredentialResponse"
+        >
+          <div
+            class="g_id_signin w-full h-full"
+            data-type="standard"
+            data-size="large"
+            data-theme="outline"
+            data-text="sign_in_with"
+            data-shape="rectangular"
+            data-logo_alignment="left"
+          ></div>
         </div>
+
         <button class="button-submit">Entrar</button>
         <p class="p">
-          Não tem uma conta? <a href="../pages/inscrever.html" class="span">Inscrever-se</a>
+          Não tem uma conta?
+          <a href="../pages/inicio.html" class="span">Inscrever-se</a>
         </p>
       </form>
     </section>
 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 
-    <script src="../js/app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/app.js" async defer></script>
   </body>
 </html>
