@@ -16,7 +16,7 @@ function handleCredentialResponse(response) {
 
   // Redireciona o usuário após 2 segundos (2000 ms)
   setTimeout(() => {
-    window.location.href = "http://localhost:5500/pages/inicio.html"; // Altere para a página de redirecionamento desejada
+    window.location.href = "http://vidflow-app.vercel.app/pages/inicio.html"; // Altere para a página de redirecionamento desejada
   }, 2000);
 }
 
