@@ -7,7 +7,7 @@
     <title>VidFlow</title>
   </head>
   <body>
-    <header class="bg-white px-7 py-5">
+    <header class="bg-white p-2">
       <nav class="flex justify-between items-center max-w-6xl mx-auto">
         <a href="../../index.html">
           <h1 class="flex gap-2 font-bold text-2xl">
@@ -26,7 +26,9 @@
         </a>
 
         <div id="user-info" class="flex items-center gap-2">
-          <a class="bg-black text-white px-5 py-2 rounded-full" href="post.html"
+          <a
+            class="bg-black text-white px-6 py-2 lg:py-3 lg:px-8 rounded-full hover:scale-105 delay-100"
+            href="post.html"
             >Publicar</a
           >
 
@@ -64,7 +66,7 @@
               d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
             ></path>
           </svg>
-          <button class="bg-green-300 px-3 py-1 rounded-full">conectar</button>
+          <button id="youtubeBtn" class="bg-green-300 px-3 py-1 rounded-full">conectar</button>
         </li>
 
         <li
@@ -182,7 +184,7 @@
         <li
           class="bg-white flex flex-col items-center justify-between p-10 w-48 h-48 rounded-3xl shadow-sm"
         >
-          <img src="../assets/kwai.png" alt="" width="64" />
+          <img src="../../assets/kwai.png" alt="" width="64" />
           <button class="bg-green-300 px-3 py-1 rounded-full">conectar</button>
         </li>
 
@@ -239,6 +241,7 @@
     </section>
 
   
+    <script src="../js/youtube-v3.js"></script>
     <script src="../js/server.js" defer></script>
   </body>
 </html>

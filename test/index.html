@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <title>Upload de Vídeo no YouTube</title>
+  </head>
+  <body>
+    <h1>Fazer Upload de Vídeo no YouTube</h1>
+
+    <input type="file" id="video-input" accept="video/*" />
+    <input
+      type="text"
+      id="video-title"
+      placeholder="Título do vídeo"
+      required
+    />
+    <input
+      type="text"
+      id="video-description"
+      placeholder="Descrição do vídeo"
+      required
+    />
+    <input
+      type="text"
+      id="video-tags"
+      placeholder="Tags (separadas por vírgula)"
+      required
+    />
+
+    <button id="login-btn">Login no YouTube</button>
+    <button id="upload-btn" style="display: none">Enviar Vídeo</button>
+
+    <script>
+      const express = require("express");
+      const google = require("googleapis").google;
+      const fs = require("fs");
+      const path = require("path");
+
+      const app = express();
+      const PORT = 3000;
+
+      const CLIENT_ID = "YOUR_CLIENT_ID";
+      const CLIENT_SECRET = "YOUR_CLIENT_SECRET";
+      const REDIRECT_URI = "http://localhost:3000/oauth2callback";
+      const oauth2Client = new google.auth.OAuth2(
+        CLIENT_ID,
+        CLIENT_SECRET,
+        REDIRECT_URI
+      );
+
+
+      app.get("/auth", (req, res) => {
+        const authUrl = oauth2Client.generateAuthUrl({
+          access_type: "offline",
+          scope: ["https://www.googleapis.com/auth/youtube"],
+        });
+        res.redirect(authUrl);
+      });
+
+      app.get("/oauth2callback", async (req, res) => {
+        const { tokens } = await oauth2Client.getToken(req.query.code);
+        oauth2Client.setCredentials(tokens);
+        res.send("Authentication successful! You can close this tab.");
+      });
+
+      app.post("/upload", async (req, res) => {
+        const youtube = google.youtube({ version: "v3", auth: oauth2Client });
+
+        const videoFilePath = path.join(__dirname, "path_to_your_video.mp4");
+        const videoFile = fs.createReadStream(videoFilePath);
+
+        const request = {
+          part: "snippet,status",
+          requestBody: {
+            snippet: {
+              title: "Your Video Title",
+              description: "Your Video Description",
+              tags: ["tag1", "tag2"],
+              categoryId: "22",
+            },
+            status: {
+              privacyStatus: "public",
+            },
+          },
+          media: {
+            body: videoFile,
+          },
+        };
+
+        try {
+          const response = await youtube.videos.insert(request);
+          res.send(
+            `Video uploaded successfully! Video ID: ${response.data.id}`
+          );
+        } catch (error) {
+          console.error(error);
+          res.status(500).send("Error uploading video");
+        }
+      });
+
+      app.listen(PORT, () => {
+        console.log(`Server running at http://localhost:${PORT}`);
+      });
+    </script>
+  </body>
+</html>

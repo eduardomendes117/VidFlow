@@ -7,8 +7,8 @@
     <title>VidFlow</title>
   </head>
   <body class="bg-gray-100">
-    <header class="bg-white px-7 py-5">
-      <nav class="flex justify-between items-center max-w-6xl mx-auto">
+    <header class="bg-white p-3">
+      <nav class="flex justify-between items-center max-w-6xl px-4 mx-auto">
         <a href="index.html">
           <h1 class="flex gap-2 font-bold text-2xl">
             <svg
@@ -25,11 +25,18 @@
           </h1>
         </a>
 
-        <a
-          class="bg-black text-white px-5 py-2 rounded-full"
-          href="src/pages/login.html"
-          >Conecte-se</a
-        >
+        <div class="flex items-center">
+          <a
+            class="hidden sm:flex px-7 py-3 lg:px-8 rounded-full hover:scale-105 delay-100"
+            href="src/pages/login.html"
+            >inscrever-se</a
+          >
+          <a
+            class="bg-black text-white px-6 py-2 lg:py-3 lg:px-8 rounded-full hover:scale-105 delay-100"
+            href="src/pages/login.html"
+            >Entrar</a
+          >
+        </div>
       </nav>
     </header>
 
